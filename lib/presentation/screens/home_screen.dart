@@ -53,7 +53,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
         return Container(
           color: Color.fromARGB(255, 255, 7, 7),
           child: Container(
-            margin: EdgeInsets.all(5),
+            margin: EdgeInsets.all(3),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Container(
@@ -65,7 +65,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
                     Container(
                       margin: EdgeInsets.all(5),
                       child: SizedBox(
-                        height: 90,
+                        height: 50,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: Image.network(
@@ -85,14 +85,11 @@ class _HomeViewState extends ConsumerState<_HomeView> {
                           
                         //* Name
                         Text(
-                          'NOMBRE: ${driver.firstName} ${driver.lastName}'
+                          '${driver.firstName} ${driver.lastName}',
+                          style: textStyle.titleLarge,
                         ),
                           
-                        SizedBox(width: 10,),
-                          
-                        Text(
-                          'EQUIPO: ${driver.teamName} '
-                        )
+                        
                           
                       ],
                     )
